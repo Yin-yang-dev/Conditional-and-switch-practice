@@ -13,7 +13,7 @@
         <h1 id="atmp2">Attempts</h1>
         <h1 id="atmp">0</h1>
         <p id="mytext"></p>
-        <img id="Locked_images" style="width: 50%">
+        <img id="locked_images" style="width: 50%">
         <script>
             const button = document.getElementById("loginBtn");
             const username = document.getElementById("user");
@@ -26,22 +26,22 @@
                     case("Daylight"):
                     console.log("password is okay");
                     document.getElementById("mytext").innerHTML = "Password is ok";
-                    document.getElementById("Locked_images").src = "./Locked_images/Unlocked.png";
+                    document.getElementById("locked_images").src = "./locked_images/Unlocked.png";
                     break;
                     case("Shadow_sinist"):
                     console.log("password is okay");
                     document.getElementById("mytext").innerHTML = "Password is ok";
-                    document.getElementById("Locked_images").src = "./Locked_images/Unlocked.png";
+                    document.getElementById("locked_images").src = "./locked_images/Unlocked.png";
                     break;
                     case("Ottofan4"):
                     console.log("password is okay");
                     document.getElementById("mytext").innerHTML = "Password is ok";
-                    document.getElementById("Locked_images").src = "./Locked_images/Unlocked.png";
+                    document.getElementById("locked_images").src = "./locked_images/Unlocked.png";
                     break;
                     default:
                         console.log("invalid password")
                         document.getElementById("mytext").innerHTML = "Password is Invalid";
-                        document.getElementById("Locked_images").src = "./Locked_images/Locked.png";
+                        document.getElementById("locked_images").src = "./locked_images/Locked.png";
                         atmp += 1
                         console.log(atmp)
                         total_attempts.innerHTML = atmp;
