@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>System Access</h1>
+        <input type="username" id="user">
+        <button id="loginBtn">login</button>
+        <h1 id="atmp2">Attempts</h1>
+        <h1 id="atmp">0</h1>
+        <p id="mytext"></p>
+        <img id="Locked_images" style="width: 50%">
+        <script>
+            const button = document.getElementById("loginBtn");
+            const username = document.getElementById("user");
+            const text = document.getElementById("mytext")
+            const total_attempts = document.getElementById("atmp")
+            let atmp = 0
+            button.addEventListener("click", function (){
+                let loginInfo = username.value
+                switch(loginInfo){
+                    case("Daylight"):
+                    console.log("password is okay");
+                    document.getElementById("mytext").innerHTML = "Password is ok";
+                    document.getElementById("Locked_images").src = "./Locked_images/Unlocked.png";
+                    break;
+                    case("Shadow_sinist"):
+                    console.log("password is okay");
+                    document.getElementById("mytext").innerHTML = "Password is ok";
+                    document.getElementById("Locked_images").src = "./Locked_images/Unlocked.png";
+                    break;
+                    case("Ottofan4"):
+                    console.log("password is okay");
+                    document.getElementById("mytext").innerHTML = "Password is ok";
+                    document.getElementById("Locked_images").src = "./Locked_images/Unlocked.png";
+                    break;
+                    default:
+                        console.log("invalid password")
+                        document.getElementById("mytext").innerHTML = "Invalid password";
+                        document.getElementById("Locked_images").src = "./Locked_images/Locked.png";
+                        atmp += 1
+                        console.log(atmp)
+                        total_attempts.innerHTML = atmp;
+                        
+                        
+                        
+                    }
+
+                    if (atmp == 3){
+ 
+                    const button = document.getElementById("loginBtn");
+                    button.disabled = true; // Disable the button
+                }
+                })
+                
+              
+        </script>
+    <p><a href="./index.html">Main page</a></p>
+</body>
+</html>

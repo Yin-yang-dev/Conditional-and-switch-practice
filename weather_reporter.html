@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+    <h1>Weather Reporter</h1>
+        <input type="number" id="weather">
+    <button id="checkBtn">Check</button>
+    <p id="mytext"></p>
+    <img id="weatherimages" style="width: 50%">
+    <script>
+        const button = document.getElementById("checkBtn");
+        const number = document.getElementById("weather");
+        const text = document.getElementById("mytext")
+        button.addEventListener("click", function (){
+            
+            //get the value from the input
+            let weather = number.value
+            console.log(weather)
+            if (weather > 32 && weather <= 49){
+                document.getElementById("mytext").innerHTML = "its cold";
+                document.getElementById("weatherimages").src = "./weatherimages/Light_snow.png";
+            }else if(weather >= 0 && weather <= 32){
+                document.getElementById("mytext").innerHTML = "its freezing";
+                document.getElementById("weatherimages").src = "./weatherimages/heavy_snow.png";
+            }else if (weather > 49 && weather <= 64){
+                document.getElementById("mytext").innerHTML = "its cool";
+                document.getElementById("weatherimages").src = "./weatherimages/cool_weather.png";
+            }else if (weather > 64 && weather <= 79){
+                document.getElementById("mytext").innerHTML = "its warm";
+                document.getElementById("weatherimages").src = "./weatherimages/warm_weather.png";
+            }else if (weather > 79){
+                document.getElementById("mytext").innerHTML = "its hot";
+                document.getElementById("weatherimages").src = "./weatherimages/hot_weather.png";
+            }
+        // if (weather === 1) {
+        // console.log("It is Monday");
+        // } else if (day === 2) {
+        // console.log("It is Tuesday");
+        // } else if (day === 3) {
+        // console.log("It is Wednesday");
+        // } else if (day === 4) {
+        // console.log("It is Thursday");
+        // } else if (day === 5) {
+        // console.log("It is Friday");
+        // } else if (day === 6) {
+        // console.log("It is Saturday");
+        // } else if (day === 7) {
+        // console.log("It is Sunday");
+        // } else {
+        // console.log(`${day} is not a day`);
+        // }
+    });
+</script>
+    <p><a href="./index.html">Main page</a></p>
+</body>
+</html>

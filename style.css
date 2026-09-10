@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(248, 167, 60);
+}
+
+#weather, #user {
+    font-size: 3em;
+    width: 300px;
+   background-color: rgb(245, 150, 7);
+    border-radius: 25px;
+    border: 1px solid black;
+    display: flex;
+
+}
+#checkBtn, #loginBtn {
+    font-size: 2em;
+    width: 110px;
+    background-color: rgb(253, 179, 67);
+    border-radius: 25px;
+    border: 1px solid black;
+    display: flex;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+#checkBtn:hover{
+   background-color: rgb(212, 150, 57);
+}
+
+#mytext{
+ font-size: 3em;
+ margin-left: 1em;
+}
+
+#atmp{
+    margin-left: 4.5em;
+}
+#atmp2{
+    margin-left: 3em;
+}
